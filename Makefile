@@ -6,10 +6,13 @@ init:
 	terraform init .
 
 plan:
-	terraform plan -out plan.tfplan .
+	terraform plan .
 
 show_plan:
 	terraform show -json plan.tfplan > plan.json
 
 apply:
 	terarform apply .
+
+sentinel_apply:
+	sentinel apply
